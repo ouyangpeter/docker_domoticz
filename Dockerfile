@@ -7,5 +7,5 @@ RUN apk add --no-cache gcc g++ make libffi-dev python3-dev && \
 COPY plugin_broadlink.tar.gz /
 RUN tar -zxvf plugin_broadlink.tar.gz && \
     mkdir -p /src/domoticz/plugins/BroadlinkRM2 && \
-    cp /plugin_broadlink/*.py /src/domoticz/plugins/BroadlinkRM2/
+    cp /plugin_broadlink/* /src/domoticz/plugins/BroadlinkRM2/
 
