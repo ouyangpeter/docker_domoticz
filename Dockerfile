@@ -9,5 +9,6 @@ RUN tar -zxvf plugin_broadlink.tar.gz && \
     mkdir -p /src/domoticz/plugins/BroadlinkRM2 && \
     cp /plugin_broadlink/* /src/domoticz/plugins/BroadlinkRM2/ && \
     cp -r /usr/lib/python3.5/site-packages/broadlink /src/domoticz/plugins/BroadlinkRM2/ && \
-    cp -r /usr/lib/python3.5/site-packages/pyaes /src/domoticz/plugins/BroadlinkRM2/
+    cp -r /usr/lib/python3.5/site-packages/pyaes /src/domoticz/plugins/BroadlinkRM2/ && \
+    sed -i -e 's/"".join/b"".join/g' /src/domoticz/plugins/BroadlinkRM2/broadlink/__init__.py
 
