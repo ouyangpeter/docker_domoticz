@@ -1,4 +1,4 @@
-FROM cgatay/domoticz:3.8356-beta
+FROM cgatay/domoticz:master
 MAINTAINER oypeter <j@oypeter.com>
 
 COPY plugin_broadlink.tar.gz /
