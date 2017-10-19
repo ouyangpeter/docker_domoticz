@@ -6,9 +6,9 @@ RUN set -ex && \
 #    echo "http://mirrors.aliyun.com/alpine/v3.4/main/" > /etc/apk/repositories && \
 #      mkdir ~/.pip && \
 #      echo -e '[global]\ntrusted-host=mirrors.aliyun.com\nindex-url=http://mirrors.aliyun.com/pypi/simple/\n' > ~/.pip/pip.conf && \
+    apk add --no-cache python3-dev && \
     apk add --no-cache --virtual TMP \
             build-base \
-            libffi-dev \
             python3-dev && \
          pip3 install --no-cache-dir -U pip && \
          pip3 install --no-cache-dir -U progressbar33 Crypto broadlink pyaes && \
